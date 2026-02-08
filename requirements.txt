@@ -1,1 +1,2 @@
-
+Wymagania:
+- Python 3.*
