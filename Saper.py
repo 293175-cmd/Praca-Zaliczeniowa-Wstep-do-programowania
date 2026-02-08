@@ -104,7 +104,7 @@ def main():
         dlugosc = input("Podano niewlasciwa dlugosc. Podaj liczbe calkowita dodatnia: ")
 
     miny = input("Podaj liczbe min na planszy: ")
-    while not (war_cal(miny) and int(miny)>0): #Sprawdzenie czy liczba min jest wartoscia calkowita dodatnia
+    while not (war_cal(miny) and int(miny)>0 and int(miny)<=((int(szerokosc)*int(dlugosc))-9)): #Sprawdzenie czy liczba min jest wartoscia calkowita dodatnia
         miny = input("Podano niewlasciwa liczbe min. Podaj liczbe calkowita dodatnia: ")
 
     szerokosc=int(szerokosc)
@@ -119,5 +119,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
