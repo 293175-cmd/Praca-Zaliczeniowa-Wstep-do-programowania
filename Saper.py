@@ -58,6 +58,16 @@ def war_cal(x): #Sprawdzenie czy podana liczba jest calkowita
     except (ValueError, TypeError):
         return False
 
+def ilosc_min(miny,max_miny):
+    try:
+        wartosc = int(miny)
+        if wartosc > 0 and wartosc <= max_miny :
+            return True
+        else:
+            return False
+    except (ValueError, TypeError):
+        return False
+
 def wybierz_pole(szerokosc, wysokosc):
     kursor = [0, 0] 
 
@@ -160,8 +170,8 @@ def main():
 
     max_min=(int(szerokosc)*int(dlugosc))-9
     miny = input(f"Podaj liczbe min na planszy (maksymalnie {max_min}): ")
-    while not (war_cal(miny) and int(miny)>0): #Sprawdzenie czy liczba min jest wartoscia calkowita dodatnia
-        miny = input("Podano niewlasciwa liczbe min. Podaj liczbe calkowita dodatnia: ")
+    while not (ilosc_min(miny, max_min)) : #Sprawdzenie czy liczba min jest wartoscia calkowita dodatnia
+        miny = input(f"Podano niewlasciwa liczbe min. Podaj liczbe calkowita dodatnia nieprzekraczajaca {max_min}: ")
 
     szerokosc=int(szerokosc)
     dlugosc=int(dlugosc)
@@ -222,3 +232,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
