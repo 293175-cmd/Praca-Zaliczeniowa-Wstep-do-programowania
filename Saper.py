@@ -117,3 +117,7 @@ def main():
         #print(plansza[i])
     start_x, start_y=wybierz_pole(szerokosc,szerokosc)
 
+if __name__ == "__main__":
+    main()
+
+
