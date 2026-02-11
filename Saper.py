@@ -217,7 +217,7 @@ def main():
             
             if pozycja in flagi: continue 
             
-            if plansza[kursor[0]][kursor[1]] == 'X':
+            if plansza[kursor[1]][kursor[0]] == 'X':
                 rysuj_plansze(szerokosc, dlugosc, plansza, odkryte, flagi, kursor, miny, koniec=True)
                 print(f"\n{KOLORY['CZERWONY']}TRAFILES NA MINE{KOLORY['RESET']}")
                 gra_trwa = False
@@ -232,4 +232,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
